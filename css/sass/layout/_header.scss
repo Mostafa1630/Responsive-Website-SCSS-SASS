@@ -1,0 +1,66 @@
+@use "../helpers/variables" as *;
+.header{
+  padding: 15px 0;
+  overflow: hidden;
+  border-bottom: 1px solid $grayColor;
+  position: relative;
+  .logo{
+    width: 30%;
+    float: left;
+    @media (max-width: 805px){
+      width: 60%;
+      text-align: center;
+    }
+    h1{
+      margin-bottom: 0;
+      margin-top: 10px;
+      color: #444242;
+    }
+    p{
+      color: #333;
+    }
+  }
+  .navbar{
+    width: 70%;
+    float: left;
+    background-color: $redClor;
+    border-radius: 15px;
+    &.active{
+      display: none;
+    }
+    @media (max-width: 805px){
+      display: flex;
+      flex-flow: column;
+      padding: 20px;
+      width: 100%;
+      align-items: center;
+    }
+    
+    li{
+      width: 20%;
+      float: $floatLeft;
+      font-size: 18px;
+      text-align: center;
+      a{
+        display: block;
+        padding: 20px 10px;
+        color: #fff;
+        &:hover{
+          color: #DDD;
+        }
+      }
+    }
+  }
+  .menu{
+    color: $redClor;
+    cursor: pointer;
+    font-size: 30px;
+    display: none;
+    position: absolute;
+    right: 40px;
+    top: 50px;
+    @media (max-width: 805px){
+      display: block;
+    }
+  }
+}

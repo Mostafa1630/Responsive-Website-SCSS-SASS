@@ -1,0 +1,21 @@
+// Variables to rtl
+$floatLeft:right;
+$floatRight:left;
+
+.header{
+    .logo{
+      float: $floatLeft;
+      h1{
+  
+      }
+      p{
+  
+      }
+    }
+    .navbar{
+      float: $floatLeft;
+      li{
+        
+      }
+    }
+}

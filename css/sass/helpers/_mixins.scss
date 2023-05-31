@@ -1,0 +1,42 @@
+// A Media to Watch Mediume
+@mixin minMedium{
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+// Mixin To Overlay
+
+@mixin overlay($color,$opcity,$indexing){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($color, $opcity);
+  z-index: $indexing;
+}
+
+
+// Previxe To Support All Browsers
+@mixin previxer($property , $value , $previxes: ()){
+  @each $previxe in $previxes{
+    #{'-' + $previxe + '-' + $property}:$value;
+  }
+  #{$property}:$value;
+}
+
+
+
+// Mixin Anmation
+@mixin fadeout($name){
+  @-webkit-keyframes #{$name}{
+    @content;
+  }
+  @-moz-keyframes #{$name}{
+    @content;
+  }
+  @keyframes #{$name}{
+    @content;
+  }
+}

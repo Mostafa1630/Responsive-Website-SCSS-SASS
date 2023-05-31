@@ -1,0 +1,221 @@
+@use "../helpers/variables" as *;
+@use "../layout/grid" as *;
+.slider{
+  padding: 20px 0;
+  text-align: center;
+  q{
+    font: {
+      size: 17px;
+      style: italic;
+    };
+    color: #504a4a;
+    line-height: 1.7;
+  }
+  .image{
+    width: 100%;
+    height: 60vh;
+    margin: 20px 0 5px;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      border-radius: 10px;
+      filter:brightness(0.4);
+    }
+  }
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li{
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #d8d0d0;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: 0.2s linear;
+      &.active,
+      &:hover{
+        border: 2px solid #333;
+        background-color: #fff;
+      }
+    }
+  }
+}
+// Start services Css
+.services{
+  .boxs{
+    @include Boxs(300px);
+    .content{
+      padding: 20px;
+      box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 12%);
+      background-color: #fff;
+      border-radius: 7px;
+      transition: 0.3s;
+      &:hover{
+        transform: translateY(-20px);
+        box-shadow: 0px 2px 4px 0px rgba(9, 9, 9, 0.12);
+        .info i{
+          animation: moving 0.6s linear infinite;
+        }
+      }
+      .title{
+        display: flex;
+        align-items: center;
+        i{
+          font-size: 33px;
+          color: #2a2828;
+          cursor: pointer;
+          transition: 0.2s;
+          margin-right: 18px;
+          &:hover{
+            color: #6f4f4f;
+            
+          }
+        }
+        h2{
+          font-size: 23px;
+          color: #333;
+          text-transform: capitalize;
+          font-weight: 600;
+        }
+      }
+      p{
+        font-size: 17px;
+        line-height: 1.7;
+        color: #777;
+        margin: 0 0 13px;
+      }
+      .info{
+        padding: 20px 0 8px;
+        border-top: 1px solid $redClor;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a{
+          color: $redClor;
+          font-size: 17px;
+        }
+        i{
+          color: $redClor;
+          cursor: pointer;
+          &:hover{
+            transition: 0.2s;
+            animation: moving 0.4s linear infinite alternate-reverse;
+          }
+        }
+      }
+    }
+  }
+}
+// End services Css
+
+//Statr Anmation
+@keyframes moving {
+  100%{
+    transform: translateX(10px);
+  }
+}
+// End Anmation
+
+// Start Players
+.players{
+  .boxs{
+    @include Boxs(230px);
+    .box{
+      box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 12%);
+      background-color: #fff;
+      border-radius: 7px;
+      overflow: hidden;
+      .image{
+        width: 100%;
+        height: 240px;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .content{
+        padding: 20px 15px;
+        h2{
+          color: #333;
+          font-size: 20px;
+          margin: 0;
+          span{
+            color: $redClor;
+          }
+        }
+        p{
+          color: #777;
+          font-size: 17px;
+          line-height: 1.5;
+          margin: 10px 0px 13px;
+        }
+        .info{
+          border-top: 1px solid #777;
+          padding: 15px 0px 10px;
+          a{
+            color: $redClor;
+            &:hover{
+              color: rgb(207, 19, 19);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// End Players
+// Start Lorem Ipsum
+.lorfmIpsum{
+  .boxs{
+    @include Boxs(300px);
+    .imageContent{
+      width: 100%;
+      overflow: hidden;
+      border-radius: 4px;
+      &:hover{
+        img{
+          transform: scale(1.2) rotate(6deg);
+          filter:grayscale(0.7);
+        }
+      }
+      img{
+        max-width: 100%;
+        transition: 0.3s;
+        position: relative;
+      }
+    }
+  }
+}
+.footer{
+  background-color: #c4bfbf;
+  .box-container{
+    @include Boxs(300px);
+    .box{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &:nth-child(1){
+        align-items: flex-start;
+      }
+      &:nth-child(2){
+        align-items: center;
+      }
+      &:last-child{
+        align-items: flex-end;
+      }
+      a{
+        color: $redClor;
+        margin: 6px 0;
+        i{
+          margin:0px 10px;
+        }
+      }
+    }
+  }
+}
+// End Lorem Ipsum
+
